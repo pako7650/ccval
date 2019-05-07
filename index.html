@@ -1,0 +1,92 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns="http://www.w3.org/1999/html">-->
+
+<!--<head>-->
+<!--    <link rel="icon"-->
+<!--          href="PinClipart.com_credit-card-clip-art_785255.png"-->
+<!--          type="image/x-icon"/>-->
+<!--    <meta charset="UTF-8"/>-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>-->
+<!--    <link rel="stylesheet" type="text/css" href="style.css">-->
+<!--    <title>CCValidator</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="inpMain">-->
+<!--<input type="text" class="inputs" style="border: 1px solid black">Enter card number</input>-->
+<!--<input type="text" class="inputs" style="border: 1px solid black">Name on card</input>-->
+<!--<input type="text" class="inputs" style="border: 1px solid black">Expires on</input>-->
+<!--<input type="text" class="inputs" style="border: 1px solid black">CVV</input>-->
+
+<!--</div>-->
+
+<!--<script defer src='main.js'></script>-->
+<!--</body>-->
+
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+<!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Credit Card Validator</title>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 m-auto">
+            <h3 class="text-center mb-3">
+                <i class="far fa-credit-card"></i> Credit Card Validator
+            </h3>
+            <div class="inpMain">
+                <div class="form-group">
+                    <label class="inputs" for="cardNumbers">Card Number</label>
+                    <input class="inputs" id="cardNumbers" type="number" placeholder="0000000000000000"
+                           title="Card number from 13 to 16 digits">
+
+                    <label class="inputs" for="expiration">Card Expiration Date</label>
+                    <input class="inputs" id="expiration" type="tel" placeholder="MM/YY"
+                           title="2-digit month and 2-digit year">
+
+                    <label class="inputs" for="card-names">Card Owner Names</label>
+                    <input class="inputs" id="card-names" type="text" placeholder="ex. JOHN DOE"
+                           title="Capital letters">
+
+                    <label class="inputs" for="card-cvv">Card CVV</label>
+                    <input class="inputs" id="card-cvv" type="password" placeholder="*** or ****"
+                           title="See on back side of the card">
+
+                    <!--                <label for="expiration">Credit Card Expiration Month</label>-->
+                    <!--                <input id="expiration" type="tel" placeholder="MM/YY" class="masked" pattern="(1[0-2]|0[1-9])\/\d\d"-->
+                    <!--                       data-valid-example="11/18" title="2-digit month and 2-digit year">-->
+                    <button type="button" title="Press for verifying card" id="submit"
+                            class="btn btn-outline-secondary">Verify
+                    </button>
+                </div>
+            </div>
+            <div id="match-list">
+                <img class="card hidden" id="visa" src="visa.png">
+                <img class="card hidden" id="master" src="master-card.png">
+                <img class="card hidden" id="amex" src="american-express.png">
+            </div>
+        </div>
+    </div>
+</div>
+<!--<script defer src="https://unpkg.com/imask"></script>-->
+<!--<script src="JS/cleave.js"></script>-->
+<!--<script src="JS/imask.js"></script>-->
+<!--<script src="JS/moment.min.js"></script>-->
+<script src="JS/main.js"></script>
+</body>
+
+
+</html>
